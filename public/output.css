@@ -554,7 +554,231 @@ video {
   display: none;
 }
 
-.text-cyan-600 {
+.fixed {
+  position: fixed;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-56 {
+  width: 14rem;
+}
+
+.max-w-px {
+  max-width: 1px;
+}
+
+.max-w-5 {
+  max-width: 1.25rem;
+}
+
+.max-w-10 {
+  max-width: 2.5rem;
+}
+
+.max-w-52 {
+  max-width: 13rem;
+}
+
+.max-w-6 {
+  max-width: 1.5rem;
+}
+
+.max-w-64 {
+  max-width: 16rem;
+}
+
+.max-w-9 {
+  max-width: 2.25rem;
+}
+
+.max-w-96 {
+  max-width: 24rem;
+}
+
+.max-w-7 {
+  max-width: 1.75rem;
+}
+
+.max-w-72 {
+  max-width: 18rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.bg-grisPale {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 236 241 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-purple-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(168 85 247 / var(--tw-bg-opacity));
+}
+
+.p-7 {
+  padding: 1.75rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-52 {
+  padding: 13rem;
+}
+
+.p-32 {
+  padding: 8rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-20 {
+  padding: 5rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-14 {
+  padding: 3.5rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
+}
+
+.pr-10 {
+  padding-right: 2.5rem;
+}
+
+.pl-12 {
+  padding-left: 3rem;
+}
+
+.pl-14 {
+  padding-left: 3.5rem;
+}
+
+.pr-14 {
+  padding-right: 3.5rem;
+}
+
+.pl-20 {
+  padding-left: 5rem;
+}
+
+.pr-20 {
+  padding-right: 5rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.pl-3 {
+  padding-left: 0.75rem;
+}
+
+.pl-32 {
+  padding-left: 8rem;
+}
+
+.pr-32 {
+  padding-right: 8rem;
+}
+
+.text-white {
   --tw-text-opacity: 1;
-  color: rgb(8 145 178 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
