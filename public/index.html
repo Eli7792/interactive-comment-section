@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="output.css">
-    <title>Interactive comment section</title>
+    <title>Interactive Comment Section</title>
 </head>
-<body class="bg-grisPale flex flex-col justify-center items-center min-h-screen">
+<body class="bg-grisPale flex flex-col min-h-screen">
     <!-- Section d'affichage des commentaires -->
-    <div id="commentsSection">
+    <div id="commentsSection" class="flex-grow w-full overflow-y-auto p-4">
         <!-- Les nouveaux commentaires seront ajoutés ici -->
-      </div>
-  
-  <div class="flex flex-col justify-center items-center">
-    <div class="bg-white flex flex-column justify-center items-center p-10 pl-15 pr-15 fixed bottom-0 mb-10">
-       <textarea name="writeComment" id="writeComment" placeholder="Add a comment..." ></textarea>
-       <button id="sendButton" class="bg-purple-500 text-white p-3">SEND</button>
+      
+        <!-- ... -->
     </div>
-  </div>
-  <script src="../js/script.js"></script>
+
+    <!-- Champ de saisie commentaire -->
+    <div class="w-encadre m-4 bg-white p-6 pt-4 sticky bottom-0 rounded-md">
+      <div class="flex flex-col ">
+        <textarea id="writeComment" class=" w-72 h-32 flex-grow border p-2 rounded-md" placeholder="Add a comment..."></textarea>
+        <button id="sendButton" class=" max-w-20 self-end mt-4 bg-purple-500 text-white px-4 py-2 rounded-md">SEND</button>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>

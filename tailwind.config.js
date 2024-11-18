@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       colors: {
         grisPale: "#eaecf1",
+      },
+      maxWidth: {
+        'encadre': '380px',
       }
     },
   },

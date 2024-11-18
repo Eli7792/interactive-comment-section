@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.commentaire {
+    background-color:white;
+    padding:35px;
+    width:340px;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+.commentaireTexte {
+    white-space:normal;
+    word-wrap:break-word;
+
+}

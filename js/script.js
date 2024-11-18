@@ -16,16 +16,27 @@ function envoyerCommentaire() {
     if (commentText.trim() !== '') {
         // Créer un nouveau div pour le commentaire
         const newCommentDiv = document.createElement('div');
-        newCommentDiv.classList.add('bg-white', 'pt-16','pb-16', 'pr-20', 'pl-20', 'mb-5', 'rounded-lg', 'shadow');
+        newCommentDiv.classList.add('commentaire');
+
         
 
         // Créer une balise <p> à l'intérieur du div
         const commentParagraph = document.createElement('p');
+        // Créer un input type number
+        const commentVoteCounter = document.createElement('input');
+        commentVoteCounter.type = 'number';
+        commentVoteCounter.placeholder = '0';
+
+        commentParagraph.classList.add('commentaireTexte');
         commentParagraph.textContent = commentText.trim();
         // Ajouter la balise <p> au div du commentaire
         newCommentDiv.appendChild(commentParagraph);
+      
+        /*Créer une div qui contiendra un input type=number et deux boutons qui
+        vont servir à augmenter et à baisser son value.*/
+
         // Ajouter le nouveau commentaire en haut de la section des commentaires
-        commentsSection.prepend(newCommentDiv);
+        commentsSection.append(newCommentDiv);
 
         // Vider le textarea
         writeComment.value = '';
