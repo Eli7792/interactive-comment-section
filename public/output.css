@@ -623,9 +623,9 @@ video {
   background-color: rgb(234 236 241 / var(--tw-bg-opacity));
 }
 
-.bg-purple-500 {
+.bg-mauve {
   --tw-bg-opacity: 1;
-  background-color: rgb(168 85 247 / var(--tw-bg-opacity));
+  background-color: rgb(84 87 182 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -664,6 +664,8 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+/*BOÎTE COMMENTAIRE*/
+
 .commentaire {
   background-color:white;
   padding:35px;
@@ -676,3 +678,52 @@ video {
   white-space:normal;
   word-wrap:break-word;
 }
+
+/*COMPTEUR DE VOTES*/
+
+.compteurVotes {
+  background-color: #eaecf1;
+  width:40%;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items:center;
+  margin-top:40px;
+  padding:6px;
+  border-radius:8px;
+}
+
+.champCompteur {
+  background-color: #eaecf1;
+  width:50%;
+  text-align:center;
+  font-weight:bold;
+  color:#5457b6;
+}
+
+.boutonCompteur {
+  color: #c3c4ef;
+  font-weight:bold;
+}
+
+/*BOUTON MODIFIER*/
+
+.boutonModifierDiv {
+  display:flex;
+  justify-content: end;
+  align-items:end;
+}
+
+.boutonModifier {
+  display:flex;
+  flex-direction:row;
+  font-weight:bold;
+  color:#5457b6;
+}
+
+.svgModifier {
+  margin-right:5px;
+  bottom:50px;
+}
+
+/*Positionner correctement le svg*/
