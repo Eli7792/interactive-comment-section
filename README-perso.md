@@ -6,7 +6,7 @@ Mon plus gros problème durant cette session de travail a été de trouver une m
 
 ### À faire :
 1. programmer le vote des commentaires [x]
-2. programmer la modification des commentaires []
+2. programmer la modification des commentaires [x]
 3. programmer la supression des commentaires (avec pop-up de confirmation) []
 4. programmer la réponse aux commentaires []
 
@@ -18,3 +18,6 @@ Aujourd'hui j'ai pu implémenter la fonction de vote et de classement des commen
 Je n'en avais pas parlé la dernière fois, mais il est bon de le mentionner, la fonction .trim() qui permet d'enlever les espaces vides dans les champs de textes s'est également révélée utile.
 
 Le développement s'est très bien déroulé et je n'ai pas eu trop de difficulté. J'espère que le tout restera aussi fluide par la suite.
+
+## 30 Novembre
+- `comment-${commentId}` permet d'assigner un Id unique à un élément.
