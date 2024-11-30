@@ -7,10 +7,15 @@ module.exports = {
         grisPale: "#eaecf1",
         mauve: '#5457b6',
         mauvePale: '#c3c4ef',
+        grisFonce: '#67727e',
       },
       maxWidth: {
         'encadre': '380px',
+      },
+      width: {
+        'popup': '355px'
       }
+
     },
   },
   plugins: [],
