@@ -574,6 +574,10 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-32 {
   height: 8rem;
 }
@@ -664,6 +668,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.hidden {
+  display:none;
+}
+
 /*BOÎTE COMMENTAIRE*/
 
 .commentaire {
@@ -709,9 +717,8 @@ video {
 /*BOUTON MODIFIER*/
 
 .boutonModifierDiv {
-  display:flex;
-  justify-content: end;
-  align-items:end;
+  height:0;
+  margin-top: 45px;
 }
 
 .boutonModifier {
@@ -723,7 +730,13 @@ video {
 
 .svgModifier {
   margin-right:5px;
-  bottom:50px;
+  position:relative;
+  bottom:-6px;
 }
 
-/*Positionner correctement le svg*/
+/*DIV BOUTONS*/
+
+.divBoutons {
+  display:flex;
+  justify-content: space-between;
+}

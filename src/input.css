@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.hidden {
+    display:none;
+}
 
 /*BOÎTE COMMENTAIRE*/
 .commentaire {
@@ -44,11 +47,9 @@
 }
 
 /*BOUTON MODIFIER*/
-
 .boutonModifierDiv {
-    display:flex;
-    justify-content: end;
-    align-items:end;
+    height:0;
+    margin-top: 45px;
 }
 .boutonModifier {
     display:flex;
@@ -58,7 +59,14 @@
 }
 .svgModifier {
     margin-right:5px;
-    bottom:50px;
+    position:relative;
+    bottom:-6px;
 }
 
-/*Positionner correctement le svg*/
+/*DIV BOUTONS*/
+
+.divBoutons {
+    display:flex;
+    justify-content: space-between;
+
+}

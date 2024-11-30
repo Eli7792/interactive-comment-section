@@ -20,4 +20,4 @@ Je n'en avais pas parlé la dernière fois, mais il est bon de le mentionner, la
 Le développement s'est très bien déroulé et je n'ai pas eu trop de difficulté. J'espère que le tout restera aussi fluide par la suite.
 
 ## 30 Novembre
-- `comment-${commentId}` permet d'assigner un Id unique à un élément.
+- `comment-${commentId}` permet d'assigner un Id unique à un id unique
