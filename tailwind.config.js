@@ -8,6 +8,7 @@ module.exports = {
         mauve: '#5457b6',
         mauvePale: '#c3c4ef',
         grisFonce: '#67727e',
+        rouge: '#ff666e',
       },
       maxWidth: {
         'encadre': '380px',

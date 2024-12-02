@@ -3,6 +3,10 @@ const sendButton = document.getElementById('sendButton');
 const writeComment = document.getElementById('writeComment');
 const commentsSection = document.getElementById('commentsSection');
 const editButton = document.getElementById('editButton');
+const popup = document.getElementById('popup');
+const contenu = document.getElementById('contenu');
+const popupDiv = document.getElementById('popupDiv');
+const encadreTexte = document.getElementById('encadreTexte');
 
 //Variables
 let commentId = 1;
@@ -79,6 +83,24 @@ function envoyerCommentaireModifier() {
 
     }
 }
+function supprimerCommentaire(event) {
+    console.log('supprimer commentaire')
+
+    //Trouver le commentaire associé au bouton
+    const commentaireDiv = event.target.closest('.commentaire');
+
+    //Faire apparaître le popup
+    popup.classList.remove('hidden');
+    //Assombrir le reste de la page
+    contenu.classList.add('sombre');
+    popupDiv.classList.remove('hidden');
+  
+
+    
+    //Effacer le commentaire
+    //commentaireDiv.remove();
+
+}
 
 function envoyerCommentaire() {
     console.log('envoyerCommentaire');
@@ -123,6 +145,24 @@ function envoyerCommentaire() {
 
         //Écouteur d'évènement
         newEditButton.addEventListener('click', modifierCommentaire);
+
+        /*BOUTON SUPPRIMER
+        ============================================*/
+
+        //Créer un nouveau div pour le bouton de suppression
+        const newDeleteButtonDiv = document.createElement('div');
+        newDeleteButtonDiv.classList.add('boutonSupprimerDiv');
+        //Créer un nouveau bouton de suppression
+        const newDeleteButton = document.createElement('button');
+        newDeleteButton.classList.add('boutonSupprimer');
+
+        //Ajout de l'icône à la div
+        newDeleteButton.innerHTML = '<svg class="svgSupprimer" width="12" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M1.167 12.448c0 .854.7 1.552 1.555 1.552h6.222c.856 0 1.556-.698 1.556-1.552V3.5H1.167v8.948Zm10.5-11.281H8.75L7.773 0h-3.88l-.976 1.167H0v1.166h11.667V1.167Z" fill="#ED6368"/></svg> Delete'
+        //Ajout du bouton à la div du bouton
+        newDeleteButtonDiv.appendChild(newDeleteButton);
+
+        //Écouteur d'évènement
+        newDeleteButton.addEventListener('click',supprimerCommentaire);
 
         /*COMPTEUR DE VOTES
         =============================================*/
@@ -173,10 +213,8 @@ function envoyerCommentaire() {
         //Ajouter les boutons au div
         newDivBoutons.appendChild(newVoteCounterDiv);
         newDivBoutons.appendChild(newEditButtonDiv);
+        newDivBoutons.appendChild(newDeleteButtonDiv);
         newDivBoutons.classList.add('divBoutons');
-
-
-
 
 
         /*AJOUT DES ÉLÉMENTS
