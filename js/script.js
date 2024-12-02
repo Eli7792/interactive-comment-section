@@ -7,15 +7,20 @@ const popup = document.getElementById('popup');
 const contenu = document.getElementById('contenu');
 const popupDiv = document.getElementById('popupDiv');
 const encadreTexte = document.getElementById('encadreTexte');
+const noButton = document.getElementById('noButton');
+const yesButton = document.getElementById('yesButton');
 
 //Variables
 let commentId = 1;
 let currentId = null;
+let commentaireActif = null;
 
 
 //Écouteurs d'évènements
 sendButton.addEventListener('click', envoyerCommentaire);
 editButton.addEventListener('click', envoyerCommentaireModifier);
+noButton.addEventListener('click', supprimerCommentaire);
+yesButton.addEventListener('click', supprimerCommentaire);
 
 //Fonctions
 
@@ -51,7 +56,7 @@ function modifierCommentaire(event) {
 
 
     //Récupérer l'id du commentaire à modifier
-     currentId = commentaireDiv.id;
+    currentId = commentaireDiv.id;
 
     //Changer le bouton send pour le bouton edit
     sendButton.classList.add('hidden');
@@ -83,22 +88,50 @@ function envoyerCommentaireModifier() {
 
     }
 }
-function supprimerCommentaire(event) {
-    console.log('supprimer commentaire')
-
-    //Trouver le commentaire associé au bouton
-    const commentaireDiv = event.target.closest('.commentaire');
+function faireApparaitrePopup(event) {
 
     //Faire apparaître le popup
     popup.classList.remove('hidden');
     //Assombrir le reste de la page
     contenu.classList.add('sombre');
     popupDiv.classList.remove('hidden');
-  
 
-    
-    //Effacer le commentaire
-    //commentaireDiv.remove();
+    //Trouver le commentaire associé au bouton
+    commentaireActif = event.target.closest('.commentaire');
+    console.log('commentaire sélectionné')
+
+    // Ajouter la classe 'actif' au commentaire sélectionné
+    if (commentaireActif) {
+        document.querySelectorAll('.commentaire').forEach((div) => div.classList.remove('actif'));
+        commentaireDiv.classList.add('actif');
+    }
+}
+function supprimerCommentaire(event) {
+
+    if (event.currentTarget === noButton) {
+        //Faire disparaître le popup
+        popup.classList.add('hidden');
+        popupDiv.classList.add('hidden');
+        //Ré-éclaircir la page
+        contenu.classList.remove('sombre');
+    }
+    if (event.currentTarget === yesButton) {
+        console.log('supprimerCommentaire')
+       
+       
+        if (commentaireActif) {
+            console.log('commentaire supprimé');
+            //Supprimer le commentaire
+            commentaireActif.remove();
+            commentaireActif = null;
+
+        }
+        //Éclaircir la page et faire disparaître le popup
+        popup.classList.add('hidden');
+        popupDiv.classList.add('hidden');
+        contenu.classList.remove('sombre');
+
+    }
 
 }
 
@@ -162,7 +195,7 @@ function envoyerCommentaire() {
         newDeleteButtonDiv.appendChild(newDeleteButton);
 
         //Écouteur d'évènement
-        newDeleteButton.addEventListener('click',supprimerCommentaire);
+        newDeleteButton.addEventListener('click', faireApparaitrePopup);
 
         /*COMPTEUR DE VOTES
         =============================================*/
