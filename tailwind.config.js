@@ -14,7 +14,9 @@ module.exports = {
         'encadre': '380px',
       },
       width: {
-        'popup': '355px'
+        'popup': '355px',
+        'table': '1000px',
+        'textareaTable': '800px',
       }
 
     },

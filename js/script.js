@@ -46,7 +46,6 @@ function classerCommentaire() {
 }
 
 function modifierCommentaire(event) {
-    console.log('modifierCommentaire')
 
     //Trouver le commentaire associé au bouton
     const commentaireDiv = event.target.closest('.commentaire');
@@ -62,12 +61,8 @@ function modifierCommentaire(event) {
     sendButton.classList.add('hidden');
     editButton.classList.remove('hidden');
 
-    console.log(currentId);
-
 }
 function envoyerCommentaireModifier() {
-    console.log('envoyerCommentaireModifier');
-
 
     //Récupérer le texte du textarea
     commentText = writeComment.value;
@@ -98,8 +93,7 @@ function faireApparaitrePopup(event) {
 
     //Trouver le commentaire associé au bouton
     commentaireActif = event.target.closest('.commentaire');
-    console.log('commentaire sélectionné')
-
+ 
     // Ajouter la classe 'actif' au commentaire sélectionné
     if (commentaireActif) {
         document.querySelectorAll('.commentaire').forEach((div) => div.classList.remove('actif'));
@@ -116,11 +110,8 @@ function supprimerCommentaire(event) {
         contenu.classList.remove('sombre');
     }
     if (event.currentTarget === yesButton) {
-        console.log('supprimerCommentaire')
-       
        
         if (commentaireActif) {
-            console.log('commentaire supprimé');
             //Supprimer le commentaire
             commentaireActif.remove();
             commentaireActif = null;
@@ -136,7 +127,7 @@ function supprimerCommentaire(event) {
 }
 
 function envoyerCommentaire() {
-    console.log('envoyerCommentaire');
+
     // Récupérer le texte du textarea
     const commentText = writeComment.value;
 
@@ -155,7 +146,6 @@ function envoyerCommentaire() {
         const idCommentaire = commentId;
         commentId++;
 
-        console.log(newCommentDiv.id);
         // Créer une balise <p> à l'intérieur du div
         const commentParagraph = document.createElement('p');
         commentParagraph.classList.add('commentaireTexte');

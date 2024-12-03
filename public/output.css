@@ -630,10 +630,6 @@ video {
   width: 355px;
 }
 
-.max-w-20 {
-  max-width: 5rem;
-}
-
 .flex-grow {
   flex-grow: 1;
 }
@@ -670,9 +666,13 @@ video {
   border-width: 1px;
 }
 
-.bg-grisFonce {
+.bg-black\/50 {
+  background-color: rgb(0 0 0 / 0.5);
+}
+
+.bg-gray-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(103 114 126 / var(--tw-bg-opacity));
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
 .bg-grisPale {
@@ -693,15 +693,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-black\/50 {
-  background-color: rgb(0 0 0 / 0.5);
-}
-
-.bg-gray-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
 .p-2 {
@@ -751,11 +742,6 @@ video {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
-.text-grisFonce {
-  --tw-text-opacity: 1;
-  color: rgb(103 114 126 / var(--tw-text-opacity));
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -780,6 +766,13 @@ video {
   margin-bottom:15px;
 }
 
+@media(min-width:768px) {
+  .commentaire {
+    width:700px;
+    display:flex;
+  }
+}
+
 .commentaireTexte {
   white-space:normal;
   word-wrap:break-word;
@@ -797,6 +790,12 @@ video {
   margin-top:40px;
   padding:6px;
   border-radius:8px;
+}
+
+@media(min-width:768px) {
+  .compteurVotes {
+    width:30%;
+  }
 }
 
 .champCompteur {
@@ -856,4 +855,54 @@ video {
 .divBoutons {
   display:flex;
   justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
+  .md\:mb-20 {
+    margin-bottom: 5rem;
+  }
+
+  .md\:mr-5 {
+    margin-right: 1.25rem;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:w-28 {
+    width: 7rem;
+  }
+
+  .md\:w-table {
+    width: 1000px;
+  }
+
+  .md\:w-textareaTable {
+    width: 800px;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:flex-col {
+    flex-direction: column;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:justify-center {
+    justify-content: center;
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
+  }
 }

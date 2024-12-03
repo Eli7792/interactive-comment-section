@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="output.css">
     <title>Interactive Comment Section</title>
 </head>
-<body class="bg-grisPale flex flex-col min-h-screen">
+<body class=" md:flex md:flex-col md:justify-center md:items-center bg-grisPale flex flex-col min-h-screen">
 
       <!-- Section d'affichage des commentaires -->
-      <div id="commentsSection" class=" z-40 flex-grow w-full overflow-y-auto p-4">
+      <div id="commentsSection" class=" z-40 flex-grow md:justify-center md:flex md:items-center w-full overflow-y-auto p-4">
         <!-- Les nouveaux commentaires seront ajoutés ici -->
     </div>
 
@@ -19,11 +19,11 @@
 
     </div>
       <!-- Champ de saisie du commentaire -->
-      <div id="encadreTexte" class=" z-40 w-encadre m-4 bg-white p-6 pt-4 sticky bottom-0 rounded-md">
-        <div class="flex flex-col">
-            <textarea id="writeComment" class="w-72 h-32 flex-grow border p-2 rounded-md" placeholder="Add a comment..."></textarea>
-            <button id="sendButton" class="max-w-20 self-end mt-4 bg-mauve text-white px-4 py-2 rounded-md">SEND</button>
-            <button id="editButton" class="max-w-20 self-end mt-4 bg-mauve text-white px-4 py-2 rounded-md hidden">EDIT</button>
+      <div id="encadreTexte" class=" md:mb-10 md:w-table z-40 w-encadre m-4 bg-white p-6 pt-4 sticky bottom-0 rounded-md">
+        <div class="flex flex-col md:justify-center md:items-center md:flex-row md:p-8">
+            <textarea id="writeComment" class="md:mr-5 md:w-textareaTable w-72 h-32 flex-grow border p-2 rounded-md" placeholder="Add a comment..."></textarea>
+            <button id="sendButton" class="md:mb-20 md:w-28 w-full self-end mt-4 bg-mauve text-white px-4 py-2 rounded-md">SEND</button>
+            <button id="editButton" class="md:w-28 w-full self-end mt-4 bg-mauve text-white px-4 py-2 rounded-md hidden">EDIT</button>
         </div>
     </div>
     <div id="popupDiv" class="hidden fixed inset-0 z-50 bg-black/50">

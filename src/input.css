@@ -18,6 +18,12 @@
     border-radius:15px;
     margin-bottom:15px;
 }
+@media(min-width:768px) {
+    .commentaire {
+        width:700px;
+        display:flex;
+    }
+}
 
 .commentaireTexte {
     white-space:normal;
@@ -37,6 +43,11 @@
     margin-top:40px;
     padding:6px;
     border-radius:8px;
+}
+@media(min-width:768px) {
+    .compteurVotes {
+        width:30%;
+    }
 }
 .champCompteur {
     background-color: #eaecf1;
